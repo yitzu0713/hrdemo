@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI LAB HR System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="lobby__banner">
+            <img src="images/mainBanner.jpg" alt="">
+        </div>
+        <div class="lobby__login">
+            <div class="lobby__login__item">
+                <div class="title">
+                    <img src="images/login_01.png" alt="">
+                    Select System
+                </div>
+                <select class="dropdown" name="SystemName" id="SystemName">
+                    <option value="1">
+                        HR system
+                    </option>
+                    <option value="2">
+                        Other system
+                    </option>
+                </select>
+                <!-- <div class="dropdown">
+                    <label class="dropdown__wrapper" for="dropdown">
+                        <div class="dropdown__text">Select</div>
+                        <div class="dropdown__arrow"></div>
+                    </label>
+
+                    <ul class="dropdown__items">
+                        <li value="HR system">HR System</li>
+                        <li value="Other">Other</li>
+                    </ul>
+                </div> -->
+            </div>
+            <div class="lobby__login__item">
+                <div class="title">
+                    <img src="images/login_02.png" alt="">
+                    Username
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="UserID" name="UserID">
+                </div>
+            </div>
+            <div class="lobby__login__item">
+                <div class="title">
+                    <img src="images/login_03.png" alt="">
+                    Password
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="Password" name="Password" onkeypress="return onEnterPws(event.keyCode, event.which);">
+                </div>
+            </div>
+            <div class="lobby__login__btn">
+                <div class="btnGroup">
+                    <input type="button" value="Login" class="" onclick="Login();">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="copyright">
+            <script type="text/javascript">document.write(new Date().getFullYear());</script> &copy;
+            AILab Technology Ltd. All Rights Reserved.
+        </p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        // $('.dropdown').click(function() {
+        //     $('.dropdown__items').toggleClass('active')
+        // });
+        // $('.dropdown__items').focusout(function() {
+        //     $(this).removeClass('active')
+        // });
+        $(".dropdown").on("click", function () {
+            $('.dropdown__items').toggleClass("active");
+        });
+        $(".dropdown__items").on("focusout", function () {
+            $(this).removeClass("active");
+        });
+    </script>
+    <!-- <script>
+        $( ".dropdown__text" ).change(function () {
+            var str = $( ".dropdown__items > li" ).click(function() {
+              $(this).text();
+            });
+            $( ".dropdown__text" ).attr("value",str);
+          })
+          .change();
+    </script> -->
+    <script>
+        
+    </script>
+</body>
+</html>
